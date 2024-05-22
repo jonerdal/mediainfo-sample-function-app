@@ -1,10 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using Storage.Helper;
 using Storage.Helper.Models;
+using System;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace Sample.MediaInfo.Core.Services
 {
@@ -175,6 +175,7 @@ namespace Sample.MediaInfo.Core.Services
             // Use MediaInfoLib as needed
             mediaInfoLib.GetOption(CompleteOptionString, CompleteOptionValueString);
             mediaInfoLib.GetOption(OutputOptionString, JsonOutputValueString);
+            mediaInfoLib.GetOption("Full", "1");
             var report = mediaInfoLib.GetInform();
 
             if (string.IsNullOrEmpty(report))
