@@ -173,7 +173,7 @@ namespace Sample.MediaInfo.Core.Services
             mediaInfoLib.OpenBufferFinalize();
 
             // Use MediaInfoLib as needed
-            //mediaInfoLib.GetOption(CompleteOptionString, CompleteOptionValueString);
+            // mediaInfoLib.GetOption(CompleteOptionString, CompleteOptionValueString);
             mediaInfoLib.GetOption(OutputOptionString, JsonOutputValueString);
             mediaInfoLib.GetOption("Full");
             var report = mediaInfoLib.GetInform();
