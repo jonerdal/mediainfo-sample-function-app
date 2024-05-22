@@ -174,7 +174,7 @@ namespace Sample.MediaInfo.Core.Services
 
             // Use MediaInfoLib as needed
             mediaInfoLib.GetOption(OutputOptionString, JsonOutputValueString);
-            mediaInfoLib.GetOption(CompleteOptionString, CompleteOptionValueString);
+            mediaInfoLib.GetOption("Full", CompleteOptionValueString);
             //mediaInfoLib.GetOption("Full");
             var report = mediaInfoLib.GetInform();
 
